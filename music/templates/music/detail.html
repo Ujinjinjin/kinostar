@@ -1,0 +1,126 @@
+{% extends 'music/base.html' %}
+{% block title %}{{ album }}{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{% url 'music:detail' album.id %}">
+                        {% if album.movie_logo %}
+                            <img src="{{ album.movie_logo.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1 align="center">{{ album.movie_title }}</h1>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td align="left">Страна:</td>
+                                <td align="right">{{ album.production }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Жанр:</td>
+                                <td align="right">{{ album.genre }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Продолжительность:</td>
+                                <td align="right">{{ album.duration }} мин.</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Возрастное ограничение:</td>
+                                <td align="right">{{ album.age_limit }}+</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+
+        <div class="col-sm-4 col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1>Здесь будет трейлер</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-md-5">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3 align="center">Сеансы на сегодня</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Время сеанса</th>
+                                <th>Цена</th>
+                                {% if user.is_authenticated %}<th>Действия</th>{% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for song in album.song_set.all %}
+                            <tr>
+                                <td>{{ song.session_time }}</td>
+                                <td>{{ song.price }} руб.</td>
+                                {% if user.is_authenticated %}
+                                    <td>
+                                        <form action="{% url 'music:delete_song' album.id song.id %}" method="post" style="display: inline;">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="song_id" value="{{ song.id }}" />
+                                            <button type="submit" class="btn btn-danger btn-xs">
+                                                <span class="glyphicon glyphicon-remove"></span>&nbsp; Удалить
+                                            </button>
+                                        </form>
+                                    </td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            {% if user.is_authenticated %}
+                <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                    <li role="presentation" class="active">
+                        <a href="{% url 'music:create_song' album.id %}">
+                            <span class="glyphicon glyphicon-plus"></span>  Добавить сеанс
+                        </a>
+                    </li>
+                </ul>
+            {% endif %}
+
+        </div>
+
+        <div class="col-sm-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3 class="rent-header">Описание</h3>
+                    <p align="center">{{ album.about }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

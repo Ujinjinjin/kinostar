@@ -1,0 +1,63 @@
+{% extends 'music/base.html' %}
+{% block title %}All Songs{% endblock %}
+{% block songs_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <!--
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'music:songs' 'all' %}">Все фильмы</a></li>
+                <li role="presentation" {% if filter_by == 'favorites' %}class="active"{% endif %}><a href="{% url 'music:songs' 'favorites' %}">Лучшие</a></li>
+            </ul>
+        </div>
+    </div>
+    -->
+
+    <div class="page-header">
+        <h1 align="center">Расписание сеансов</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Время сеанса</th>
+                                <th>Название</th>
+                                <th>Жанр</th>
+                                <th>Цена</th>
+                                <th>Продолжительность</th>
+                                <th>Возрастное ограничение</th>
+                                <th>Страна</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for song in song_list %}
+                                <tr>
+                                    <td>{{ song.session_time }}</td>
+                                    <td><a href="{% url 'music:detail' song.movie.id %}">{{ song.movie.movie_title }}</a></td>
+                                    <td>{{ song.movie.genre }}</td>
+                                    <td>{{ song.price }} руб.</td>
+                                    <td>{{ song.movie.duration }} мин.</td>
+                                    <td>{{ song.movie.age_limit }}+</td>
+                                    <td>{{ song.movie.production }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
