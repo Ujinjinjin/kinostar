@@ -1,5 +1,5 @@
 {% extends 'music/base.html' %}
-{% block title %}Add a New Song{% endblock %}
+{% block title %}Добавить сеанс фильма "{{ album.movie_title }}"{% endblock %}
 {% block albums_active %}active{% endblock %}
 
 {% block body %}
@@ -11,15 +11,36 @@
         <div class="col-sm-4 col-md-3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                        <a href="{% url 'music:detail' album.id %}">
-                            {% if album.album_logo %}
-                                <img src="{{ album.album_logo.url }}" class="img-responsive">
-                            {% else %}
-                                <h3>No image to display</h3>
-                            {% endif %}
-                        </a>
-                    <h1>{{ album.album_title }} <small>{{ album.genre }}</small></h1>
-                    <h2>{{ album.artist }}</h2>
+                    <a href="{% url 'music:detail' album.id %}">
+                        {% if album.movie_logo %}
+                            <img src="{{ album.movie_logo.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1 align="center">{{ album.movie_title }}</h1>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td align="left">Страна:</td>
+                                <td align="right">{{ album.production }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Жанр:</td>
+                                <td align="right">{{ album.genre }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Продолжительность:</td>
+                                <td align="right">{{ album.duration }} мин.</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Возрастное ограничение:</td>
+                                <td align="right">{{ album.age_limit }}+</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -27,14 +48,14 @@
         <!-- Right Song Info -->
         <div class="col-sm-8 col-md-9">
 
-            <ul class="nav nav-pills" style="margin-bottom: 10px;">
-                <li role="presentation"><a href="{% url 'music:detail' album.id %}">View All</a></li>
+            <!--<ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="{% url 'music:detail' album.id %}">Вернуться к фильму</a></li>
                 <li role="presentation" class="active"><a href="{% url 'music:create_song' album.id %}">Add New Song</a></li>
-            </ul>
+            </ul>-->
 
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>Add a New Song</h3>
+                    <h3>Добавить сеанс фильма "{{ album.movie_title }}"</h3>
                     {% if error_message %}
                         <p><strong>{{ error_message }}</strong></p>
                     {% endif %}
@@ -44,7 +65,7 @@
                         {% include 'music/form_template.html' %}
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Добавить</button>
                             </div>
                         </div>
                     </form>

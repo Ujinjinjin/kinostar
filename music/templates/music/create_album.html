@@ -1,5 +1,5 @@
 {% extends 'music/base.html' %}
-{% block title %}Add a New Album{% endblock %}
+{% block title %}Добавить новый фильм{% endblock %}
 {% block albums_active %}active{% endblock %}
 
 {% block body %}
@@ -10,7 +10,7 @@
         <div class="col-sm-12 col-md-7">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>Add a New Album</h3>
+                    <h3>Добавить новый фильм</h3>
                     {% if error_message %}
                         <p><strong>{{ error_message }}</strong></p>
                     {% endif %}
@@ -19,7 +19,7 @@
                         {% include 'music/form_template.html' %}
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Добавить</button>
                             </div>
                         </div>
                     </form>
@@ -27,6 +27,7 @@
             </div>
         </div>
 
+    <!--
         <div class="col-sm-12 col-md-5">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -44,7 +45,7 @@
                 </div>
             </div>
         </div>
-
+    -->
     </div>
 
 </div>
