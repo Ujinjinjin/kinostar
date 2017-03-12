@@ -9,7 +9,8 @@ SECRET_KEY = 'rha7*we-io_dbhnf$k)%wum_i=-fct9+n^j+@5j9p*$z01lzj1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ujinjinjin.pythonanywhere.com']
+ALLOWED_HOSTS = ['ujinjinjin.pythonanywhere.com',
+                 '127.0.0.1',]
 
 # Application definition
 
