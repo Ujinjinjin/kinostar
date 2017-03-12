@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
                 <li class="{% block songs_active %}{% endblock %}"><a href="{% url 'music:songs' 'all' %}"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>&nbsp; Расписание</a></li>
                 <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'music:index' %}"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> В прокате</a></li>
-                <li class=""><a href="#"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp; Контакты</a></li>
+                <li class="{% block contacts_active %}{% endblock %}"><a href="{% url 'music:contacts' %}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp; Контакты</a></li>
             </ul>
 
             {% if user.is_authenticated %}

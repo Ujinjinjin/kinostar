@@ -139,6 +139,10 @@ def index(request):
         return render(request, 'music/index.html', {'albums': albums})
 
 
+def contacts(request):
+    return render(request, 'music/contacts.html')
+
+
 def logout_user(request):
     logout(request)
     albums = Album.objects.all()
