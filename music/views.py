@@ -41,25 +41,15 @@ def create_session(request, album_id):
     if form.is_valid():
         albums_songs = album.song_set.all()
         for s in albums_songs:
-            if s.song_title == form.cleaned_data.get("song_title"):
+            if s.session_time == form.cleaned_data.get("session_time"):
                 context = {
                     'movie': album,
                     'form': form,
-                    'error_message': 'You already added that song',
+                    'error_message': 'Сеанс на {} для этого фильма уже создан'.format(s.session_time),
                 }
                 return render(request, 'music/create_session.html', context)
         song = form.save(commit=False)
         song.album = album
-        song.audio_file = request.FILES['audio_file']
-        file_type = song.audio_file.url.split('.')[-1]
-        file_type = file_type.lower()
-        if file_type not in AUDIO_FILE_TYPES:
-            context = {
-                'album': album,
-                'form': form,
-                'error_message': 'Audio file must be WAV, MP3, or OGG',
-            }
-            return render(request, 'music/create_session.html', context)
 
         song.save()
         return render(request, 'music/detail.html', {'movie': album})
