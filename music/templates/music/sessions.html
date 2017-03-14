@@ -9,8 +9,8 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
-                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'music:songs' 'all' %}">Все фильмы</a></li>
-                <li role="presentation" {% if filter_by == 'favorites' %}class="active"{% endif %}><a href="{% url 'music:songs' 'favorites' %}">Лучшие</a></li>
+                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'music:sessions' 'all' %}">Все фильмы</a></li>
+                <li role="presentation" {% if filter_by == 'favorites' %}class="active"{% endif %}><a href="{% url 'music:sessions' 'favorites' %}">Лучшие</a></li>
             </ul>
         </div>
     </div>
@@ -22,7 +22,7 @@
 
     <div class="row">
 
-        <div class="col-sm-12">
+        <div class="col-xs-12 col-sm-12">
 
             <div class="panel panel-info">
                 <div class="panel-body">
@@ -39,15 +39,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for song in song_list %}
+                            {% for session in session_list %}
                                 <tr>
-                                    <td>{{ song.session_time }}</td>
-                                    <td><a href="{% url 'music:detail' song.movie.id %}">{{ song.movie.movie_title }}</a></td>
-                                    <td>{{ song.movie.genre }}</td>
-                                    <td>{{ song.price }} руб.</td>
-                                    <td>{{ song.movie.duration }} мин.</td>
-                                    <td>{{ song.movie.age_limit }}+</td>
-                                    <td>{{ song.movie.production }}</td>
+                                    <td>{{ session.session_time }}</td>
+                                    <td><a href="{% url 'music:detail' session.movie.id %}">{{ session.movie.movie_title }}</a></td>
+                                    <td>{{ session.movie.genre }}</td>
+                                    <td>{{ session.price }} руб.</td>
+                                    <td>{{ session.movie.duration }} мин.</td>
+                                    <td>{{ session.movie.age_limit }}+</td>
+                                    <td>{{ session.movie.production }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>

@@ -10,7 +10,7 @@ AUDIO_FILE_TYPES = ['wav', 'mp3', 'ogg']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
 
-def create_album(request):
+def create_movie(request):
     if not request.user.is_authenticated():
         return render(request, 'music/login.html')
     else:
@@ -22,20 +22,20 @@ def create_album(request):
             file_type = file_type.lower()
             if file_type not in IMAGE_FILE_TYPES:
                 context = {
-                    'album': album,
+                    'movie': album,
                     'form': form,
                     'error_message': 'Image file must be PNG, JPG, or JPEG',
                 }
-                return render(request, 'music/create_album.html', context)
+                return render(request, 'music/create_movie.html', context)
             album.save()
-            return render(request, 'music/detail.html', {'album': album})
+            return render(request, 'music/detail.html', {'movie': album})
         context = {
             "form": form,
         }
-        return render(request, 'music/create_album.html', context)
+        return render(request, 'music/create_movie.html', context)
 
 
-def create_song(request, album_id):
+def create_session(request, album_id):
     form = SongForm(request.POST or None, request.FILES or None)
     album = get_object_or_404(Album, pk=album_id)
     if form.is_valid():
@@ -43,11 +43,11 @@ def create_song(request, album_id):
         for s in albums_songs:
             if s.song_title == form.cleaned_data.get("song_title"):
                 context = {
-                    'album': album,
+                    'movie': album,
                     'form': form,
                     'error_message': 'You already added that song',
                 }
-                return render(request, 'music/create_song.html', context)
+                return render(request, 'music/create_session.html', context)
         song = form.save(commit=False)
         song.album = album
         song.audio_file = request.FILES['audio_file']
@@ -59,35 +59,35 @@ def create_song(request, album_id):
                 'form': form,
                 'error_message': 'Audio file must be WAV, MP3, or OGG',
             }
-            return render(request, 'music/create_song.html', context)
+            return render(request, 'music/create_session.html', context)
 
         song.save()
-        return render(request, 'music/detail.html', {'album': album})
+        return render(request, 'music/detail.html', {'movie': album})
     context = {
-        'album': album,
+        'movie': album,
         'form': form,
     }
-    return render(request, 'music/create_song.html', context)
+    return render(request, 'music/create_session.html', context)
 
 
-def delete_album(request, album_id):
+def delete_movie(request, album_id):
     album = Album.objects.get(pk=album_id)
     album.delete()
     albums = Album.objects.filter(user=request.user)
-    return render(request, 'music/index.html', {'albums': albums})
+    return render(request, 'music/index.html', {'movies': albums})
 
 
-def delete_song(request, album_id, song_id):
+def delete_session(request, album_id, song_id):
     album = get_object_or_404(Album, pk=album_id)
     song = Song.objects.get(pk=song_id)
     song.delete()
-    return render(request, 'music/detail.html', {'album': album})
+    return render(request, 'music/detail.html', {'movie': album})
 
 
 def detail(request, album_id):
     user = request.user
     album = get_object_or_404(Album, pk=album_id)
-    return render(request, 'music/detail.html', {'album': album, 'user': user})
+    return render(request, 'music/detail.html', {'movie': album, 'user': user})
 
 
 def favorite(request, song_id):
@@ -132,11 +132,11 @@ def index(request):
             Q(song_title__icontains=query)
         ).distinct()
         return render(request, 'music/index.html', {
-            'albums': albums,
+            'movies': albums,
             'songs': song_results,
         })
     else:
-        return render(request, 'music/index.html', {'albums': albums})
+        return render(request, 'music/index.html', {'movies': albums})
 
 
 def contacts(request):
@@ -158,7 +158,7 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 albums = Album.objects.filter(user=request.user)
-                return render(request, 'music/index.html', {'albums': albums})
+                return render(request, 'music/index.html', {'movies': albums})
             else:
                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
         else:
@@ -179,14 +179,14 @@ def register(request):
             if user.is_active:
                 login(request, user)
                 albums = Album.objects.filter(user=request.user)
-                return render(request, 'music/index.html', {'albums': albums})
+                return render(request, 'music/index.html', {'movies': albums})
     context = {
         "form": form,
     }
     return render(request, 'music/register.html', context)
 
 
-def songs(request, filter_by):
+def sessions(request, filter_by):
 
     try:
         song_ids = []
@@ -198,7 +198,7 @@ def songs(request, filter_by):
             users_songs = users_songs.filter(is_favorite=True)
     except Album.DoesNotExist:
         users_songs = []
-    return render(request, 'music/songs.html', {
-        'song_list': users_songs,
+    return render(request, 'music/sessions.html', {
+        'session_list': users_songs,
         'filter_by': filter_by,
     })

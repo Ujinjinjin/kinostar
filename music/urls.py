@@ -10,11 +10,11 @@ urlpatterns = [
     url(r'^logout_user/$', views.logout_user, name='logout_user'),
     url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
     url(r'^(?P<song_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
-    url(r'^songs/(?P<filter_by>[a-zA_Z]+)/$', views.songs, name='songs'),
-    url(r'^create_album/$', views.create_album, name='create_album'),
-    url(r'^(?P<album_id>[0-9]+)/create_song/$', views.create_song, name='create_song'),
-    url(r'^(?P<album_id>[0-9]+)/delete_song/(?P<song_id>[0-9]+)/$', views.delete_song, name='delete_song'),
+    url(r'^sessions/(?P<filter_by>[a-zA_Z]+)/$', views.sessions, name='sessions'),
+    url(r'^create_movie/$', views.create_movie, name='create_movie'),
+    url(r'^(?P<album_id>[0-9]+)/create_session/$', views.create_session, name='create_session'),
+    url(r'^(?P<album_id>[0-9]+)/delete_session/(?P<song_id>[0-9]+)/$', views.delete_session, name='delete_session'),
     url(r'^(?P<album_id>[0-9]+)/favorite_album/$', views.favorite_album, name='favorite_album'),
-    url(r'^(?P<album_id>[0-9]+)/delete_album/$', views.delete_album, name='delete_album'),
+    url(r'^(?P<album_id>[0-9]+)/delete_movie/$', views.delete_movie, name='delete_movie'),
     url(r'^contacts/$', views.contacts, name='contacts')
 ]

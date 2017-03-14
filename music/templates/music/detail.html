@@ -11,32 +11,32 @@
         <div class="col-sm-4 col-md-3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <a href="{% url 'music:detail' album.id %}">
-                        {% if album.movie_logo %}
-                            <img src="{{ album.movie_logo.url }}" class="img-responsive">
+                    <a href="{% url 'music:detail' movie.id %}">
+                        {% if movie.movie_logo %}
+                            <img src="{{ movie.movie_logo.url }}" class="img-responsive">
                         {% else %}
                             <h3>No image to display</h3>
                         {% endif %}
                     </a>
-                    <h1 align="center">{{ album.movie_title }}</h1>
+                    <h1 align="center">{{ movie.movie_title }}</h1>
 
                     <table class="table">
                         <tbody>
                             <tr>
                                 <td align="left">Страна:</td>
-                                <td align="right">{{ album.production }}</td>
+                                <td align="right">{{ movie.production }}</td>
                             </tr>
                             <tr>
                                 <td align="left">Жанр:</td>
-                                <td align="right">{{ album.genre }}</td>
+                                <td align="right">{{ movie.genre }}</td>
                             </tr>
                             <tr>
                                 <td align="left">Продолжительность:</td>
-                                <td align="right">{{ album.duration }} мин.</td>
+                                <td align="right">{{ movie.duration }} мин.</td>
                             </tr>
                             <tr>
                                 <td align="left">Возрастное ограничение:</td>
-                                <td align="right">{{ album.age_limit }}+</td>
+                                <td align="right">{{ movie.age_limit }}+</td>
                             </tr>
 
                         </tbody>
@@ -51,7 +51,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <iframe id="yuvid_iframe" style="border:0px #FFFFFF none;" scrolling="no" allowfullscreen="true"
-                            src="{{ album.trailer.url }}"
+                            src="{{ movie.trailer.url }}"
                             width="100%" height="600">
 
                     </iframe>
@@ -79,15 +79,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                        {% for song in album.song_set.all %}
+                        {% for session in movie.song_set.all %}
                             <tr>
-                                <td>{{ song.session_time }}</td>
-                                <td>{{ song.price }} руб.</td>
+                                <td>{{ session.session_time }}</td>
+                                <td>{{ session.price }} руб.</td>
                                 {% if user.is_authenticated %}
                                     <td>
-                                        <form action="{% url 'music:delete_song' album.id song.id %}" method="post" style="display: inline;">
+                                        <form action="{% url 'music:delete_session' movie.id session.id %}" method="post" style="display: inline;">
                                             {% csrf_token %}
-                                            <input type="hidden" name="song_id" value="{{ song.id }}" />
+                                            <input type="hidden" name="song_id" value="{{ session.id }}" />
                                             <button type="submit" class="btn btn-danger btn-xs">
                                                 <span class="glyphicon glyphicon-remove"></span>&nbsp; Удалить
                                             </button>
@@ -105,7 +105,7 @@
             {% if user.is_authenticated %}
                 <ul class="nav nav-pills" style="margin-bottom: 10px;">
                     <li role="presentation" class="active">
-                        <a href="{% url 'music:create_song' album.id %}">
+                        <a href="{% url 'music:create_session' movie.id %}">
                             <span class="glyphicon glyphicon-plus"></span>  Добавить сеанс
                         </a>
                     </li>
@@ -118,7 +118,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3 class="rent-header">Описание</h3>
-                    <p align="center">{{ album.about }}</p>
+                    <p align="center">{{ movie.about }}</p>
                 </div>
             </div>
         </div>
