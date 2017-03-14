@@ -10,7 +10,10 @@ SECRET_KEY = 'rha7*we-io_dbhnf$k)%wum_i=-fct9+n^j+@5j9p*$z01lzj1'
 DEBUG = True
 
 ALLOWED_HOSTS = ['ujinjinjin.pythonanywhere.com',
-                 '127.0.0.1',]
+                 '127.0.0.1',
+                 'киностар.рус',
+                 'www.xn--80apfnfnfic.xn--p1acf',
+                 'webapp-270739.pythonanywhere.com',]
 
 # Application definition
 
