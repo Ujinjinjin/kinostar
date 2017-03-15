@@ -15,48 +15,50 @@
         </div>
     </div>
     -->
-
-    <div class="page-header">
-        <h1 class="rent-header">Расписание сеансов</h1>
+    <div class="col-sm-12">
+        <div class="page-header">
+            <h1 class="rent-header">Расписание сеансов</h1>
+        </div>
     </div>
 
     <div class="row">
+        <div class="session-table">
 
-        <div class="col-xs-12 col-sm-12">
+            <div class="col-sm-12">
 
-            <div class="panel panel-info">
-                <div class="panel-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Время сеанса</th>
-                                <th>Название</th>
-                                <th>Жанр</th>
-                                <th>Цена</th>
-                                <th>Продолжительность</th>
-                                <th>Возрастное ограничение</th>
-                                <th>Страна</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for session in session_list %}
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
                                 <tr>
-                                    <td>{{ session.session_time }}</td>
-                                    <td><a href="{% url 'music:detail' session.movie.id %}">{{ session.movie.movie_title }}</a></td>
-                                    <td>{{ session.movie.genre }}</td>
-                                    <td>{{ session.price }} руб.</td>
-                                    <td>{{ session.movie.duration }} мин.</td>
-                                    <td>{{ session.movie.age_limit }}+</td>
-                                    <td>{{ session.movie.production }}</td>
+                                    <th>Время сеанса</th>
+                                    <th>Название</th>
+                                    <th>Жанр</th>
+                                    <th>Цена</th>
+                                    <th>Продолжительность</th>
+                                    <th>Возрастное ограничение</th>
+                                    <th>Страна</th>
                                 </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {% for session in session_list %}
+                                    <tr>
+                                        <td>{{ session.session_time }}</td>
+                                        <td><a href="{% url 'music:detail' session.movie.id %}">{{ session.movie.movie_title }}</a></td>
+                                        <td>{{ session.movie.genre }}</td>
+                                        <td>{{ session.price }} руб.</td>
+                                        <td>{{ session.movie.duration }} мин.</td>
+                                        <td>{{ session.movie.age_limit }}+</td>
+                                        <td>{{ session.movie.production }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
             </div>
-
         </div>
-
     </div>
 
 </div>

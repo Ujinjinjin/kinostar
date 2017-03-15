@@ -13,7 +13,7 @@
                 <div class="panel-body">
                     <a href="{% url 'music:detail' movie.id %}">
                         {% if movie.movie_logo %}
-                            <img src="{{ movie.movie_logo.url }}" class="img-responsive">
+                            <img src="{{ movie.movie_logo.url }}" class="img-responsive" align="center">
                         {% else %}
                             <h3>No image to display</h3>
                         {% endif %}

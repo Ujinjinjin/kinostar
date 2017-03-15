@@ -1,5 +1,6 @@
 body {
     background: white url("images/background.png");
+    min-width: 700px;
 }
 
 ul.errorlist {
@@ -32,6 +33,10 @@ ul.errorlist > li {
     margin-bottom: 25px;
 }
 
-.info-text {
+.session-table {
+    min-width: 700px;
+}
 
+.logo {
+    margin-bottom: 75px;
 }
