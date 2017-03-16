@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="093edd58-3408-452a-b5e6-578b065ad167" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/static/music/style.css" afterPath="$PROJECT_DIR$/music/static/music/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/sessions.html" afterPath="$PROJECT_DIR$/music/templates/music/sessions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/detail.html" afterPath="$PROJECT_DIR$/music/templates/music/detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -111,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1257">
-              <caret line="61" column="37" lean-forward="false" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            <state relative-caret-position="223">
+              <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
               <folding>
                 <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -177,11 +176,11 @@
         <option value="$PROJECT_DIR$/music/templates/music/login.html" />
         <option value="$PROJECT_DIR$/music/views.py" />
         <option value="$PROJECT_DIR$/website/settings.py" />
-        <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
         <option value="$PROJECT_DIR$/music/templates/music/base.html" />
         <option value="$PROJECT_DIR$/music/templates/music/index.html" />
         <option value="$PROJECT_DIR$/music/templates/music/sessions.html" />
         <option value="$PROJECT_DIR$/music/static/music/style.css" />
+        <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
       </list>
     </option>
   </component>
@@ -1001,7 +1000,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489632090431</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update #18 Session table fixed">
+      <created>1489632764516</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1489632764516</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1049,7 +1055,8 @@
     <MESSAGE value="Update #16 Debugging activated" />
     <MESSAGE value="Update #16 Detail and movies visualisation fixed" />
     <MESSAGE value="Update #17 New bg and body position" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update #17 New bg and body position" />
+    <MESSAGE value="Update #18 Session table fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update #18 Session table fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1377,17 +1384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1257">
-          <caret line="61" column="37" lean-forward="false" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/create_session.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1445,6 +1441,17 @@
         <state relative-caret-position="396">
           <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
