@@ -6,7 +6,7 @@ from django.db.models import Q
 from .forms import AlbumForm, SongForm, UserForm
 from .models import Album, Song
 
-AUDIO_FILE_TYPES = ['wav', 'mp3', 'ogg']
+VIDEO_FILE_TYPES = ['mp4', 'avi']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
 
@@ -63,7 +63,7 @@ def create_session(request, album_id):
 def delete_movie(request, album_id):
     album = Album.objects.get(pk=album_id)
     album.delete()
-    albums = Album.objects.filter(user=request.user)
+    albums = Album.objects.all()
     return render(request, 'music/index.html', {'movies': albums})
 
 
@@ -135,7 +135,7 @@ def contacts(request):
 
 def logout_user(request):
     logout(request)
-    albums = Album.objects.all()
+    # albums = Album.objects.all()
     return redirect('music:index')
 
 
@@ -147,7 +147,7 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                albums = Album.objects.filter(user=request.user)
+                albums = Album.objects.all()
                 return render(request, 'music/index.html', {'movies': albums})
             else:
                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
@@ -188,6 +188,7 @@ def sessions(request, filter_by):
             users_songs = users_songs.filter(is_favorite=True)
     except Album.DoesNotExist:
         users_songs = []
+    users_songs = users_songs.order_by('session_time')
     return render(request, 'music/sessions.html', {
         'session_list': users_songs,
         'filter_by': filter_by,

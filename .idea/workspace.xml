@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="093edd58-3408-452a-b5e6-578b065ad167" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/static/music/style.css" afterPath="$PROJECT_DIR$/music/static/music/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/contacts.html" afterPath="$PROJECT_DIR$/music/templates/music/contacts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/detail.html" afterPath="$PROJECT_DIR$/music/templates/music/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/login.html" afterPath="$PROJECT_DIR$/music/templates/music/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/register.html" afterPath="$PROJECT_DIR$/music/templates/music/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/views.py" afterPath="$PROJECT_DIR$/music/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/settings.py" afterPath="$PROJECT_DIR$/website/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,18 +30,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/templates/music/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="68" column="55" lean-forward="false" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="328">
+              <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -90,11 +77,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="576">
               <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/music/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="190" column="54" lean-forward="false" selection-start-line="190" selection-start-column="54" selection-end-line="190" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/music/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -105,26 +124,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contacts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/contacts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -163,20 +162,20 @@
         <option value="$PROJECT_DIR$/music/templates/music/base_visitor.html" />
         <option value="$PROJECT_DIR$/music/templates/music/create_album.html" />
         <option value="$PROJECT_DIR$/music/templates/music/create_song.html" />
-        <option value="$PROJECT_DIR$/website/settings.py" />
         <option value="$PROJECT_DIR$/music/templates/music/songs.html" />
         <option value="$PROJECT_DIR$/website/urls.py" />
         <option value="$PROJECT_DIR$/music/urls.py" />
-        <option value="$PROJECT_DIR$/music/views.py" />
         <option value="$PROJECT_DIR$/music/templates/music/create_session.html" />
         <option value="$PROJECT_DIR$/music/templates/music/sessions.html" />
         <option value="$PROJECT_DIR$/music/templates/music/index.html" />
-        <option value="$PROJECT_DIR$/music/templates/music/base.html" />
         <option value="$PROJECT_DIR$/music/templates/music/contacts.html" />
         <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
         <option value="$PROJECT_DIR$/music/templates/music/register.html" />
         <option value="$PROJECT_DIR$/music/templates/music/login.html" />
         <option value="$PROJECT_DIR$/music/static/music/style.css" />
+        <option value="$PROJECT_DIR$/music/templates/music/base.html" />
+        <option value="$PROJECT_DIR$/music/views.py" />
+        <option value="$PROJECT_DIR$/website/settings.py" />
       </list>
     </option>
   </component>
@@ -207,6 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,7 +337,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -346,6 +345,206 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/db.sqlite3</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/999471.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/999471_6xaocJd.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/oXwLkML.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Везучий_случай_Русский_трейлер_2017_HD.mp4</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Конг_WZhehcr.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Конг__Остров_черепа_-_Русский_Трейлер_3_финальный_2017.mp4</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Красавица_и_Чудовище_-_Второй_трейлер.mp4</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate.csh</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate.fish</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate_this.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/django-admin</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/django-admin.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/easy_install</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/easy_install-3.4</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/pip</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/pip3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/pip3.4</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python-config</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python3.4</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/wheel</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/include/python3.4m</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/base.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/changelists.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/dashboard.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/fonts.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/forms.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/login.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/rtl.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/widgets.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/LICENSE.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/README.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/Roboto-Bold-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/Roboto-Light-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/Roboto-Regular-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/LICENSE</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/README.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/calendar-icons.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/gis/move_vertex_off.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/gis/move_vertex_on.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-addlink.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-alert.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-calendar.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-changelink.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-clock.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-deletelink.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-no.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-unknown-alt.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-unknown.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-yes.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/inline-delete.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/search.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/selector-icons.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/sorting-icons.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/tooltag-add.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/tooltag-arrowright.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/SelectBox.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/SelectFilter2.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/actions.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/actions.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/admin/DateTimeShortcuts.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/admin/RelatedObjectLookups.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/calendar.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/cancel.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/change_form.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/collapse.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/collapse.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/core.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/inlines.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/inlines.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/jquery.init.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/popup_response.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/prepopulate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/prepopulate.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/prepopulate_init.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/timeparse.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/urlify.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/jquery/jquery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/jquery/jquery.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/xregexp/xregexp.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/xregexp/xregexp.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/favicon.ico</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/music/images/background.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/music/js/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/music/style.css</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Лего_Фильм-_Бэтмен_-_четвертый_трейлер.mp4</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Django server.Unnamed">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -754,14 +953,21 @@
       <option name="project" value="LOCAL" />
       <updated>1489540300183</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update #14 changed titles">
+      <created>1489540820498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1489540820498</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20515575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20784102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -797,7 +1003,8 @@
     <MESSAGE value="Update #11 added logo and adaptive interface" />
     <MESSAGE value="Update #12 changed tab icon" />
     <MESSAGE value="Update #13 page width repared" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update #13 page width repared" />
+    <MESSAGE value="Update #14 changed titles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update #14 changed titles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1055,33 +1262,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/create_album.html" />
     <entry file="file://$PROJECT_DIR$/music/templates/music/create_song.html" />
-    <entry file="file://$PROJECT_DIR$/music/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/songs.html" />
     <entry file="file://$PROJECT_DIR$/website/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1091,14 +1273,6 @@
             <element signature="e#0#41#0" expanded="false" />
             <marker date="1489526497276" expanded="true" signature="167:289" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="68" column="55" lean-forward="false" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,16 +1289,6 @@
         <state relative-caret-position="22">
           <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,8 +1350,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
+        <state relative-caret-position="576">
           <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="190" column="54" lean-forward="false" selection-start-line="190" selection-start-column="54" selection-end-line="190" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
