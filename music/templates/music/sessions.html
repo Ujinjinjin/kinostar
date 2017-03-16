@@ -35,7 +35,6 @@
                                     <th>Название</th>
                                     <th>Жанр</th>
                                     <th>Цена</th>
-                                    <th>Продолжительность</th>
                                     <th>Возрастное ограничение</th>
                                     <th>Страна</th>
                                 </tr>
@@ -47,8 +46,7 @@
                                         <td><a href="{% url 'music:detail' session.movie.id %}">{{ session.movie.movie_title }}</a></td>
                                         <td>{{ session.movie.genre }}</td>
                                         <td>{{ session.price }} руб.</td>
-                                        <td>{{ session.movie.duration }} мин.</td>
-                                        <td>{{ session.movie.age_limit }}+</td>
+                                        <td align="center">{{ session.movie.age_limit }}+</td>
                                         <td>{{ session.movie.production }}</td>
                                     </tr>
                                 {% endfor %}
