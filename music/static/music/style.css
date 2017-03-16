@@ -1,6 +1,16 @@
 body {
-    background: white url("images/background.png");
+    background: white url("images/background_collage.jpg");
     min-width: 725px;
+}
+
+.panel-light{
+    background: white url("images/background.png");
+    width: 75%;
+    margin:0 auto;
+    margin-top: 75px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
 }
 
 ul.errorlist {
@@ -38,5 +48,6 @@ ul.errorlist > li {
 }
 
 .logo {
+    margin-top: 75px;
     margin-bottom: 75px;
 }
