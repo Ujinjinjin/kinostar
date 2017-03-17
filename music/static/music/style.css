@@ -5,7 +5,7 @@ body {
 
 .panel-light{
     background: white url("images/background.png");
-    width: 75%;
+    width: 90%;
     margin:0 auto;
     margin-top: 75px;
     -moz-border-radius: 0px;
@@ -48,6 +48,7 @@ ul.errorlist > li {
 }
 
 .logo {
+    margin:0 auto;
     margin-top: 75px;
     margin-bottom: 75px;
 }
