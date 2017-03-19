@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="093edd58-3408-452a-b5e6-578b065ad167" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/create_movie.html" afterPath="$PROJECT_DIR$/music/templates/music/create_movie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/base.html" afterPath="$PROJECT_DIR$/music/templates/music/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,121 +23,21 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/music/templates/music/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="66" column="45" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
+            <state relative-caret-position="378">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_movie.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/create_movie.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_session.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/create_session.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="190" column="54" lean-forward="false" selection-start-line="190" selection-start-column="54" selection-end-line="190" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contacts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/contacts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding>
-                <element signature="n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#349#774#0#HTML" expanded="false" />
-                <element signature="n#address#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#address#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#address#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-              <folding>
-                <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sessions.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/templates/music/sessions.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -188,23 +88,28 @@
         <option value="$PROJECT_DIR$/music/templates/music/sessions.html" />
         <option value="$PROJECT_DIR$/music/static/music/style.css" />
         <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
-        <option value="$PROJECT_DIR$/music/templates/music/base.html" />
         <option value="$PROJECT_DIR$/music/templates/music/contacts.html" />
         <option value="$PROJECT_DIR$/music/templates/music/create_movie.html" />
+        <option value="$PROJECT_DIR$/music/templates/music/base.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="y" value="21" />
+    <option name="width" value="1280" />
+    <option name="height" value="779" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -221,6 +126,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -352,7 +258,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,206 +265,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.documentation.PythonDocumentationConfigurable" />
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db.sqlite3</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/999471.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/999471_6xaocJd.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/oXwLkML.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Везучий_случай_Русский_трейлер_2017_HD.mp4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Конг_WZhehcr.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Конг__Остров_черепа_-_Русский_Трейлер_3_финальный_2017.mp4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Красавица_и_Чудовище_-_Второй_трейлер.mp4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate.csh</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate.fish</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/activate_this.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/django-admin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/django-admin.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/easy_install</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/easy_install-3.4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/pip</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/pip3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/pip3.4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python-config</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/python3.4</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/bin/wheel</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/myvenv/include/python3.4m</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/base.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/changelists.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/dashboard.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/fonts.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/forms.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/login.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/rtl.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/css/widgets.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/LICENSE.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/README.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/Roboto-Bold-webfont.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/Roboto-Light-webfont.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/fonts/Roboto-Regular-webfont.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/README.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/calendar-icons.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/gis/move_vertex_off.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/gis/move_vertex_on.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-addlink.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-alert.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-calendar.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-changelink.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-clock.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-deletelink.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-no.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-unknown-alt.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-unknown.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/icon-yes.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/inline-delete.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/search.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/selector-icons.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/sorting-icons.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/tooltag-add.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/img/tooltag-arrowright.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/SelectBox.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/SelectFilter2.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/actions.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/actions.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/admin/DateTimeShortcuts.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/admin/RelatedObjectLookups.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/calendar.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/cancel.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/change_form.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/collapse.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/collapse.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/core.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/inlines.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/inlines.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/jquery.init.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/popup_response.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/prepopulate.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/prepopulate.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/prepopulate_init.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/timeparse.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/urlify.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/jquery/jquery.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/jquery/jquery.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/xregexp/xregexp.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/admin/js/vendor/xregexp/xregexp.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/favicon.ico</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/music/images/background.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/music/js/main.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/website/static/music/style.css</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/media/Лего_Фильм-_Бэтмен_-_четвертый_трейлер.mp4</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Viberr" sdk-home="/usr/bin/python3.5">
+        <option name="mySdkHome" value="/usr/bin/python3.5" />
+        <option name="myModuleName" value="Viberr" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunManager" selected="Django server.Unnamed">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -1042,17 +756,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="0" y="21" width="1280" height="779" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20784102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31030577" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30932203" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1104,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,9 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1137,9 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,9 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1826">
           <caret line="89" column="14" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="89" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1181,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,9 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1215,9 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1225,9 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1826">
           <caret line="89" column="14" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="89" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1259,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,9 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,9 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1303,26 +991,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1826">
           <caret line="89" column="14" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="89" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="576" column="8" lean-forward="false" selection-start-line="576" selection-start-column="8" selection-end-line="576" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f824f0fc-b408-4414-adc4-b024a9e9f773/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/db/models/base.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f824f0fc-b408-4414-adc4-b024a9e9f773/console.sql" />
     <entry file="file://$PROJECT_DIR$/music/templates/music/form_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1342,9 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,7 +1027,6 @@
           <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <marker date="1489526497276" expanded="true" signature="167:289" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1390,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1398,13 +1066,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/create_session.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="1026">
           <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
           <folding />
         </state>
@@ -1412,11 +1079,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/music/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="3312">
           <caret line="190" column="54" lean-forward="false" selection-start-line="190" selection-start-column="54" selection-end-line="190" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1424,21 +1088,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="828">
           <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/sessions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
+        <state relative-caret-position="864">
           <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
           <folding />
         </state>
@@ -1446,57 +1108,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
+        <state relative-caret-position="972">
           <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/contacts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="90">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#349#774#0#HTML" expanded="false" />
-            <element signature="n#address#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#address#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#address#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="66" column="45" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/create_movie.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        <state relative-caret-position="258">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
