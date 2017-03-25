@@ -48,19 +48,19 @@
                         </div>
                     </div>
                 </div>
-                {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+                <!--{% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}-->
             {% endfor %}
-        {% else %}
-            {% if user.is_authenticated %}
-                <div class="col-sm-12" align="center">
-                    <br>
-                    <a href="{% url 'music:create_movie' %}">
-                        <button type="button" class="btn btn-success">
-                            <span class="glyphicon glyphicon-plus"></span>&nbsp; Добавить фильм
-                        </button>
-                    </a>
-                </div>
-            {% endif %}
+        {% endif %}
+
+        {% if user.is_authenticated %}
+            <div class="col-sm-4 col-lg-3" align="center">
+                <br>
+                <a href="{% url 'music:create_movie' %}">
+                    <button type="button" class="btn btn-success">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Добавить фильм
+                    </button>
+                </a>
+            </div>
         {% endif %}
     </div>
 

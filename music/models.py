@@ -6,7 +6,7 @@ class Album(models.Model):
 
     movie_title = models.CharField(max_length=250)
     movie_logo = models.FileField(default=None)
-    trailer = models.FileField(default=None)
+    trailer = models.CharField(max_length=500, default='')
     about = models.CharField(max_length=2000, default='')
     genre = models.CharField(max_length=100, default=None)
     duration = models.IntegerField(default=0)

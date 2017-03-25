@@ -17,6 +17,7 @@ def create_movie(request):
         form = AlbumForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             album = form.save(commit=False)
+            album.trailer = str(album.trailer).replace('watch?v=', 'embed/')[:album.index('&')]
             album.movie_logo = request.FILES['movie_logo']
             file_type = album.movie_logo.url.split('.')[-1]
             file_type = file_type.lower()
@@ -63,8 +64,8 @@ def create_session(request, album_id):
 def delete_movie(request, album_id):
     album = Album.objects.get(pk=album_id)
     album.delete()
-    albums = Album.objects.all()
-    return render(request, 'music/index.html', {'movies': albums})
+    # albums = Album.objects.all()
+    return redirect('music:index')
 
 
 def delete_session(request, album_id, song_id):
@@ -111,22 +112,7 @@ def favorite_album(request, album_id):
 def index(request):
 
     albums = Album.objects.all()
-    song_results = Song.objects.all()
-    query = request.GET.get("q")
-    if query:
-        albums = albums.filter(
-            Q(album_title__imcontains=query) |
-            Q(artist__icontains=query)
-        ).distinct()
-        song_results = song_results.filter(
-            Q(song_title__icontains=query)
-        ).distinct()
-        return render(request, 'music/index.html', {
-            'movies': albums,
-            'songs': song_results,
-        })
-    else:
-        return render(request, 'music/index.html', {'movies': albums})
+    return render(request, 'music/index.html', {'movies': albums})
 
 
 def contacts(request):
@@ -188,7 +174,16 @@ def sessions(request, filter_by):
             users_songs = users_songs.filter(is_favorite=True)
     except Album.DoesNotExist:
         users_songs = []
-    users_songs = users_songs.order_by('session_time')
+    users_songs = list(users_songs.order_by('session_time'))
+
+    while True:  # Корректировка по времени
+        if int(str(users_songs[0]).split(':')[0]) < 4:  # Все что до 4 утра - ночь
+            c = users_songs[0]  # Запоминаем первый сеанс
+            del(users_songs[0])  # Удаляем его
+            users_songs.append(c)  # Добавляем в конец P.s. Думаю, что так быстрей
+        else:
+            break
+
     return render(request, 'music/sessions.html', {
         'session_list': users_songs,
         'filter_by': filter_by,
