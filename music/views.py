@@ -139,7 +139,7 @@ def login_user(request):
                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
         else:
             return render(request, 'music/login.html', {'error_message': 'Invalid login'})
-    return render(request, 'music/login.html')
+    return redirect('music:index')
 
 
 def register(request):
