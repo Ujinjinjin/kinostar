@@ -26,3 +26,11 @@ class Song(models.Model):
 
     def __str__(self):
         return self.session_time
+
+
+class EmbedText(models.Model):
+    text = models.CharField(max_length=100)
+    page_name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return '{}: {}'.format(self.page_name, self.text)

@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^(?P<album_id>[0-9]+)/delete_session/(?P<song_id>[0-9]+)/$', views.delete_session, name='delete_session'),
     url(r'^(?P<album_id>[0-9]+)/favorite_album/$', views.favorite_album, name='favorite_album'),
     url(r'^(?P<album_id>[0-9]+)/delete_movie/$', views.delete_movie, name='delete_movie'),
-    url(r'^contacts/$', views.contacts, name='contacts')
+    url(r'^contacts/$', views.contacts, name='contacts'),
+    url(r'^edit_embed/(?P<page_name>[a-zA_Z]+)/$', views.edit_embed, name='edit_embed')
 ]

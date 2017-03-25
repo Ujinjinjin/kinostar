@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from .forms import AlbumForm, SongForm, UserForm
-from .models import Album, Song
+from .models import Album, Song, EmbedText
 
 VIDEO_FILE_TYPES = ['mp4', 'avi']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
@@ -17,7 +17,11 @@ def create_movie(request):
         form = AlbumForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             album = form.save(commit=False)
-            album.trailer = str(album.trailer).replace('watch?v=', 'embed/')[:album.index('&')]
+
+            trailer = str(album.trailer).replace('watch?v=', 'embed/') + '&'
+            trailer = trailer[:trailer.index('&')]
+            album.trailer = trailer
+
             album.movie_logo = request.FILES['movie_logo']
             file_type = album.movie_logo.url.split('.')[-1]
             file_type = file_type.lower()
@@ -81,6 +85,17 @@ def detail(request, album_id):
     return render(request, 'music/detail.html', {'movie': album, 'user': user})
 
 
+def edit_embed(request, page_name):
+    embed = EmbedText.objects.get(page_name=page_name)
+    if request.method == "POST":
+        new_embed = request.POST['new_embed']
+    else:
+        new_embed = embed.text
+    embed.text = new_embed
+    embed.save()
+    return redirect('music:{}'.format(page_name))
+
+
 def favorite(request, song_id):
     song = get_object_or_404(Song, pk=song_id)
     try:
@@ -110,9 +125,9 @@ def favorite_album(request, album_id):
 
 
 def index(request):
-
     albums = Album.objects.all()
-    return render(request, 'music/index.html', {'movies': albums})
+    embed_text = EmbedText.objects.get(page_name='index')
+    return render(request, 'music/index.html', {'movies': albums, 'embed_text': embed_text})
 
 
 def contacts(request):
