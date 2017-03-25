@@ -65,8 +65,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/music/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="141" column="34" lean-forward="false" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+            <state relative-caret-position="204">
+              <caret line="135" column="18" lean-forward="false" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -701,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490403322648</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Update #25 Redirect to music:index after login">
+      <created>1490403844920</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1490403844920</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -774,7 +781,8 @@
     <MESSAGE value="Update #21 Contacts page fixed" />
     <MESSAGE value="Update #23 Video from url, sessions after 00:00 sorting, logo 95%" />
     <MESSAGE value="Update #24 Deleted videos from media" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update #24 Deleted videos from media" />
+    <MESSAGE value="Update #25 Redirect to music:index after login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update #25 Redirect to music:index after login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1118,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/music/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="141" column="34" lean-forward="false" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="135" column="18" lean-forward="false" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
           <folding />
         </state>
       </provider>

@@ -133,13 +133,13 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                albums = Album.objects.all()
-                return render(request, 'music/index.html', {'movies': albums})
+                # albums = Album.objects.all()
+                return redirect('music:index')
             else:
                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
         else:
             return render(request, 'music/login.html', {'error_message': 'Invalid login'})
-    return redirect('music:index')
+    return render(request, 'music/login.html')
 
 
 def register(request):
