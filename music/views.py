@@ -177,19 +177,20 @@ def register(request):
     return render(request, 'music/register.html', context)
 
 
-def sessions(request, filter_by):
-
+def sessions(request):
     try:
         song_ids = []
         for album in Album.objects.all():
             for song in album.song_set.all():
                 song_ids.append(song.pk)
         users_songs = Song.objects.filter(pk__in=song_ids)
-        if filter_by == 'favorites':
-            users_songs = users_songs.filter(is_favorite=True)
+        # if filter_by == 'favorites':
+        #     users_songs = users_songs.filter(is_favorite=True)
     except Album.DoesNotExist:
         users_songs = []
     users_songs = list(users_songs.order_by('session_time'))
+
+    embed_text = EmbedText.objects.get(page_name='sessions')
 
     while True:  # Корректировка по времени
         if int(str(users_songs[0]).split(':')[0]) < 4:  # Все что до 4 утра - ночь
@@ -201,5 +202,6 @@ def sessions(request, filter_by):
 
     return render(request, 'music/sessions.html', {
         'session_list': users_songs,
-        'filter_by': filter_by,
+        # 'filter_by': filter_by,
+        'embed_text': embed_text,
     })

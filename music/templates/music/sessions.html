@@ -5,19 +5,50 @@
 {% block body %}
 <div class="container-fluid songs-container">
 
-    <!--
-    <div class="row">
-        <div class="col-sm-12">
-            <ul class="nav nav-pills" style="margin-bottom: 10px;">
-                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'music:sessions' 'all' %}">Все фильмы</a></li>
-                <li role="presentation" {% if filter_by == 'favorites' %}class="active"{% endif %}><a href="{% url 'music:sessions' 'favorites' %}">Лучшие</a></li>
-            </ul>
-        </div>
-    </div>
-    -->
     <div class="col-sm-12">
         <div class="page-header">
-            <h1 class="rent-header">Расписание сеансов</h1>
+            <h1 class="rent-header">
+                {{ embed_text.text }}
+                <br>
+                {% if user.is_authenticated %}
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Редактировать
+                    </button>
+
+                    <!-- Modal style="margin-bottom: 25px" -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="myModalLabel">Введите заголовок</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form" action="{% url 'music:edit_embed' 'sessions' %}" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="id_new_embed">
+                                                Новый заголовок:
+                                            </label>
+                                            <div>
+                                                <input id="id_new_embed" maxlength="100" name="new_embed" type="text" value="{{ embed_text.text }}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div>
+                                                <button type="submit" class="btn btn-success">Подтвердить</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer" style="text-align: center">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </h1>
         </div>
     </div>
 
