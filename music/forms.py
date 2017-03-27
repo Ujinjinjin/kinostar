@@ -1,22 +1,23 @@
 from django import forms
 from django.contrib.auth.models import User
 
-from .models import Album, Song
+from .models import Movie, Session
 
 
-class AlbumForm(forms.ModelForm):
+class MovieForm(forms.ModelForm):
+    premier_date = forms.DateField(widget=forms.SelectDateWidget)
 
     class Meta:
-        model = Album
+        model = Movie
         fields = ['movie_title', 'movie_logo', 'trailer', 'about', 'genre',
-                  'duration', 'age_limit', 'production', 'is_favorite']
+                  'duration', 'age_limit', 'production', 'premier_date', 'is_announcement']
 
 
-class SongForm(forms.ModelForm):
+class SessionForm(forms.ModelForm):
 
     class Meta:
-        model = Song
-        fields = ['movie', 'session_time', 'price', 'is_favorite']
+        model = Session
+        fields = ['movie', 'session_time', 'price']
 
 
 class UserForm(forms.ModelForm):

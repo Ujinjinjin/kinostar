@@ -1,94 +1,99 @@
 {% extends 'music/base.html' %}
 {% block title %}Расписание сеансов{% endblock %}
-{% block songs_active %}active{% endblock %}
+{% block sessions_active %}active{% endblock %}
 
 {% block body %}
 <div class="container-fluid songs-container">
 
-    <div class="col-sm-12">
-        <div class="page-header">
-            <h1 class="rent-header">
-                {{ embed_text.text }}
-                <br>
-                {% if user.is_authenticated %}
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                        Редактировать
-                    </button>
+    {% if session_list %}
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h1 class="rent-header">
+                    {{ embed_text.text }}
+                    <br>
+                    {% if user.is_authenticated %}
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Редактировать
+                        </button>
 
-                    <!-- Modal style="margin-bottom: 25px" -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title" id="myModalLabel">Введите заголовок</h3>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="form-horizontal" role="form" action="{% url 'music:edit_embed' 'sessions' %}" method="post" enctype="multipart/form-data">
-                                        {% csrf_token %}
-                                        <div class="form-group">
-                                            <label for="id_new_embed">
-                                                Новый заголовок:
-                                            </label>
-                                            <div>
-                                                <input id="id_new_embed" maxlength="100" name="new_embed" type="text" value="{{ embed_text.text }}">
+                        <!-- Modal style="margin-bottom: 25px" -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="myModalLabel">Введите заголовок</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="{% url 'music:edit_embed' 'sessions' %}" method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="id_new_embed">
+                                                    Новый заголовок:
+                                                </label>
+                                                <div>
+                                                    <input id="id_new_embed" maxlength="100" name="new_embed" type="text" value="{{ embed_text.text }}">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div>
-                                                <button type="submit" class="btn btn-success">Подтвердить</button>
+                                            <div class="form-group">
+                                                <div>
+                                                    <button type="submit" class="btn btn-success">Подтвердить</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer" style="text-align: center">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer" style="text-align: center">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                {% endif %}
-            </h1>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="session-table">
-
-            <div class="col-sm-12">
-
-                <div class="panel panel-info">
-                    <div class="panel-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Время сеанса</th>
-                                    <th>Название</th>
-                                    <th>Жанр</th>
-                                    <th>Цена</th>
-                                    <th>Возрастное ограничение</th>
-                                    <th>Страна</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for session in session_list %}
-                                    <tr>
-                                        <td>{{ session.session_time }}</td>
-                                        <td><a href="{% url 'music:detail' session.movie.id %}">{{ session.movie.movie_title }}</a></td>
-                                        <td>{{ session.movie.genre }}</td>
-                                        <td>{{ session.price }} руб.</td>
-                                        <td align="center">{{ session.movie.age_limit }}+</td>
-                                        <td>{{ session.movie.production }}</td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
+                    {% endif %}
+                </h1>
             </div>
         </div>
-    </div>
+
+
+        <div class="row">
+            <div class="session-table">
+
+                <div class="col-sm-12">
+
+                    <div class="panel panel-info">
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Время сеанса</th>
+                                        <th>Название</th>
+                                        <th>Жанр</th>
+                                        <th>Цена</th>
+                                        <th>Возрастное ограничение</th>
+                                        <th>Страна</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for session in session_list %}
+                                        <tr>
+                                            <td>{{ session.session_time }}</td>
+                                            <td><a href="{% url 'music:detail' session.movie.id %}">{{ session.movie.movie_title }}</a></td>
+                                            <td>{{ session.movie.genre }}</td>
+                                            <td><span class="label label-success">{{ session.price }} руб.</span></td>
+                                            <td align="center">{{ session.movie.age_limit }}+</td>
+                                            <td>{{ session.movie.production }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <h1 class="rent-header">Простите, сегодня сеансов нет.</h1>
+    {% endif %}
 
 </div>
 {% endblock %}

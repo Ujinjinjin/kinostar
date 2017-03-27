@@ -20,6 +20,10 @@
                     </a>
                     <h1 align="center">{{ movie.movie_title }}</h1>
 
+                    {% if movie.is_announcement %}
+                        <h2 align="center"><span class="label label-info">{{ movie.premier_date }}</span></h2>
+                    {% endif %}
+
                     <table class="table">
                         <tbody>
                             <tr>
@@ -79,10 +83,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                        {% for session in movie.song_set.all %}
+                        {% for session in movie.session_set.all %}
                             <tr>
                                 <td>{{ session.session_time }}</td>
-                                <td>{{ session.price }} руб.</td>
+                                <td><span class="label label-success">{{ session.price }} руб.</span></td>
                                 {% if user.is_authenticated %}
                                     <td>
                                         <form action="{% url 'music:delete_session' movie.id session.id %}" method="post" style="display: inline;">

@@ -3,18 +3,42 @@ from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
-from .forms import AlbumForm, SongForm, UserForm
-from .models import Album, Song, EmbedText
+from .forms import MovieForm, SessionForm, UserForm
+from .models import Movie, Session, EmbedText
 
 VIDEO_FILE_TYPES = ['mp4', 'avi']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
+
+
+def announcements(request):
+    albums = Movie.objects.filter(is_announcement=True).order_by('premier_date')  # Фильмы сортируются по дате. Я че зря добавил эту фичу?
+    embed_text = EmbedText.objects.get(page_name='announcements')
+    return render(request, 'music/index.html', {'movies': albums, 'embed_text': embed_text})
+
+
+def announcement_movie(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    try:
+        if movie.is_announcement:
+            movie.is_announcement = False
+        else:
+            movie.is_announcement = True
+        movie.save()
+    except (KeyError, Movie.DoesNotExist):
+        return JsonResponse({'success': False})
+    else:
+        return JsonResponse({'success': True})
+
+
+def contacts(request):
+    return render(request, 'music/contacts.html')
 
 
 def create_movie(request):
     if not request.user.is_authenticated():
         return render(request, 'music/login.html')
     else:
-        form = AlbumForm(request.POST or None, request.FILES or None)
+        form = MovieForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             album = form.save(commit=False)
 
@@ -40,49 +64,49 @@ def create_movie(request):
         return render(request, 'music/create_movie.html', context)
 
 
-def create_session(request, album_id):
-    form = SongForm(request.POST or None, request.FILES or None)
-    album = get_object_or_404(Album, pk=album_id)
+def create_session(request, movie_id):
+    form = SessionForm(request.POST or None, request.FILES or None)
+    movie = get_object_or_404(Movie, pk=movie_id)
     if form.is_valid():
-        albums_songs = album.song_set.all()
-        for s in albums_songs:
+        movies_sessions = movie.session_set.all()
+        for s in movies_sessions:
             if s.session_time == form.cleaned_data.get("session_time"):
                 context = {
-                    'movie': album,
+                    'movie': movie,
                     'form': form,
                     'error_message': 'Сеанс на {} для этого фильма уже создан'.format(s.session_time),
                 }
                 return render(request, 'music/create_session.html', context)
-        song = form.save(commit=False)
-        song.album = album
+        session = form.save(commit=False)
+        session.movie = movie
 
-        song.save()
-        return render(request, 'music/detail.html', {'movie': album})
+        session.save()
+        return render(request, 'music/detail.html', {'movie': movie})
     context = {
-        'movie': album,
+        'movie': movie,
         'form': form,
     }
     return render(request, 'music/create_session.html', context)
 
 
-def delete_movie(request, album_id):
-    album = Album.objects.get(pk=album_id)
-    album.delete()
-    # albums = Album.objects.all()
+def delete_movie(request, movie_id):
+    movie = Movie.objects.get(pk=movie_id)
+    movie.delete()
+    # albums = Movie.objects.all()
     return redirect('music:index')
 
 
-def delete_session(request, album_id, song_id):
-    album = get_object_or_404(Album, pk=album_id)
-    song = Song.objects.get(pk=song_id)
-    song.delete()
-    return render(request, 'music/detail.html', {'movie': album})
+def delete_session(request, movie_id, session_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    session = Session.objects.get(pk=session_id)
+    session.delete()
+    return render(request, 'music/detail.html', {'movie': movie})
 
 
-def detail(request, album_id):
+def detail(request, movie_id):
     user = request.user
-    album = get_object_or_404(Album, pk=album_id)
-    return render(request, 'music/detail.html', {'movie': album, 'user': user})
+    movie = get_object_or_404(Movie, pk=movie_id)
+    return render(request, 'music/detail.html', {'movie': movie, 'user': user})
 
 
 def edit_embed(request, page_name):
@@ -96,47 +120,29 @@ def edit_embed(request, page_name):
     return redirect('music:{}'.format(page_name))
 
 
-def favorite(request, song_id):
-    song = get_object_or_404(Song, pk=song_id)
+"""def favorite(request, song_id):
+    song = get_object_or_404(Session, pk=song_id)
     try:
         if song.is_favorite:
             song.is_favorite = False
         else:
             song.is_favorite = True
         song.save()
-    except (KeyError, Song.DoesNotExist):
+    except (KeyError, Session.DoesNotExist):
         return JsonResponse({'success': False})
     else:
-        return JsonResponse({'success': True})
-
-
-def favorite_album(request, album_id):
-    album = get_object_or_404(Album, pk=album_id)
-    try:
-        if album.is_favorite:
-            album.is_favorite = False
-        else:
-            album.is_favorite = True
-        album.save()
-    except (KeyError, Album.DoesNotExist):
-        return JsonResponse({'success': False})
-    else:
-        return JsonResponse({'success': True})
+        return JsonResponse({'success': True})"""
 
 
 def index(request):
-    albums = Album.objects.all()
+    movies = Movie.objects.filter(is_announcement=False).order_by('premier_date')
     embed_text = EmbedText.objects.get(page_name='index')
-    return render(request, 'music/index.html', {'movies': albums, 'embed_text': embed_text})
-
-
-def contacts(request):
-    return render(request, 'music/contacts.html')
+    return render(request, 'music/index.html', {'movies': movies, 'embed_text': embed_text})
 
 
 def logout_user(request):
     logout(request)
-    # albums = Album.objects.all()
+    # albums = Movie.objects.all()
     return redirect('music:index')
 
 
@@ -148,7 +154,7 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                # albums = Album.objects.all()
+                # albums = Movie.objects.all()
                 return redirect('music:index')
             else:
                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
@@ -169,8 +175,8 @@ def register(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                albums = Album.objects.filter(user=request.user)
-                return render(request, 'music/index.html', {'movies': albums})
+                movies = Movie.objects.filter(user=request.user)
+                return render(request, 'music/index.html', {'movies': movies})
     context = {
         "form": form,
     }
@@ -179,29 +185,30 @@ def register(request):
 
 def sessions(request):
     try:
-        song_ids = []
-        for album in Album.objects.all():
-            for song in album.song_set.all():
-                song_ids.append(song.pk)
-        users_songs = Song.objects.filter(pk__in=song_ids)
+        session_ids = []
+        for movie in Movie.objects.all():
+            for session in movie.session_set.all():
+                session_ids.append(session.pk)
+        all_sessions = Session.objects.filter(pk__in=session_ids)
         # if filter_by == 'favorites':
-        #     users_songs = users_songs.filter(is_favorite=True)
-    except Album.DoesNotExist:
-        users_songs = []
-    users_songs = list(users_songs.order_by('session_time'))
+        #     all_sessions = all_sessions.filter(is_favorite=True)
+    except Movie.DoesNotExist:
+        all_sessions = []
+    all_sessions = list(all_sessions.order_by('session_time'))
 
     embed_text = EmbedText.objects.get(page_name='sessions')
 
-    while True:  # Корректировка по времени
-        if int(str(users_songs[0]).split(':')[0]) < 4:  # Все что до 4 утра - ночь
-            c = users_songs[0]  # Запоминаем первый сеанс
-            del(users_songs[0])  # Удаляем его
-            users_songs.append(c)  # Добавляем в конец P.s. Думаю, что так быстрей
-        else:
-            break
+    if len(all_sessions) > 0:
+        while True:  # Корректировка по времени
+            if int(str(all_sessions[0]).split(':')[0]) < 4:  # Все что до 4 утра - ночь
+                c = all_sessions[0]  # Запоминаем первый сеанс
+                del(all_sessions[0])  # Удаляем его
+                all_sessions.append(c)  # Добавляем в конец P.s. Думаю, что так быстрей
+            else:
+                break
 
     return render(request, 'music/sessions.html', {
-        'session_list': users_songs,
+        'session_list': all_sessions,
         # 'filter_by': filter_by,
         'embed_text': embed_text,
     })

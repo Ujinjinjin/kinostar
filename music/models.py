@@ -2,7 +2,7 @@ from django.contrib.auth.models import Permission, User
 from django.db import models
 
 
-class Album(models.Model):
+class Movie(models.Model):
 
     movie_title = models.CharField(max_length=250)
     movie_logo = models.FileField(default=None)
@@ -12,17 +12,17 @@ class Album(models.Model):
     duration = models.IntegerField(default=0)
     age_limit = models.IntegerField(default=0)
     production = models.CharField(max_length=100, default=None)
-    is_favorite = models.BooleanField(default=False)
+    premier_date = models.DateField(default=None)
+    is_announcement = models.BooleanField(default=False)
 
     def __str__(self):
         return self.movie_title
 
 
-class Song(models.Model):
-    movie = models.ForeignKey(Album, on_delete=models.CASCADE)
+class Session(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     session_time = models.CharField(max_length=250, default=None)
     price = models.IntegerField(default=0)
-    is_favorite = models.BooleanField(default=False)
 
     def __str__(self):
         return self.session_time
