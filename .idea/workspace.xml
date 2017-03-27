@@ -2,20 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="093edd58-3408-452a-b5e6-578b065ad167" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/music/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/1483173760_zveropoy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/999471.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/999471_6xaocJd.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/999471_oYCCKiS.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/boss_poster1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/e64491fa866db32552872f724976e4e3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/life2017_poster2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/oXwLkML.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/powerrangers_poster12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/powerrangers_poster12_8lV8rA6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Бос_молокосос.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Босс_молокосос.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Везучий_случай.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Живое.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Зверопой.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Красавица_и_чудовище.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Красавица_и_чудовище_TDV3ehc.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Моана.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Моана_mtc9ZfJ.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Могучие_рейнджеры.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Могучие_рейнджеры_M20s3uh.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/admin.py" afterPath="$PROJECT_DIR$/music/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/forms.py" afterPath="$PROJECT_DIR$/music/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/models.py" afterPath="$PROJECT_DIR$/music/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/base.html" afterPath="$PROJECT_DIR$/music/templates/music/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/detail.html" afterPath="$PROJECT_DIR$/music/templates/music/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/form_template.html" afterPath="$PROJECT_DIR$/music/templates/music/form_template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/index.html" afterPath="$PROJECT_DIR$/music/templates/music/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/login.html" afterPath="$PROJECT_DIR$/music/templates/music/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/sessions.html" afterPath="$PROJECT_DIR$/music/templates/music/sessions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/urls.py" afterPath="$PROJECT_DIR$/music/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/views.py" afterPath="$PROJECT_DIR$/music/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -762,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490563948534</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Update #28 Announcements page, movie sorting by date, premier date added to movie, price label">
+      <created>1490651819960</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1490651819961</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -838,7 +853,8 @@
     <MESSAGE value="Update #25 Redirect to music:index after login" />
     <MESSAGE value="Update #25.2 Redirect to music:index after login. Fixed" />
     <MESSAGE value="Update #27 Now you can edit headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update #27 Now you can edit headers" />
+    <MESSAGE value="Update #28 Announcements page, movie sorting by date, premier date added to movie, price label" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update #28 Announcements page, movie sorting by date, premier date added to movie, price label" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
