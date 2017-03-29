@@ -2,9 +2,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from django.db.models import Q
 from .forms import MovieForm, SessionForm, UserForm
 from .models import Movie, Session, EmbedText
+import re
 
 VIDEO_FILE_TYPES = ['mp4', 'avi']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
@@ -40,24 +40,27 @@ def create_movie(request):
     else:
         form = MovieForm(request.POST or None, request.FILES or None)
         if form.is_valid():
-            album = form.save(commit=False)
+            movie = form.save(commit=False)
 
-            trailer = str(album.trailer).replace('watch?v=', 'embed/') + '&'
-            trailer = trailer[:trailer.index('&')]
-            album.trailer = trailer
+            try:
+                r = re.findall('([\w]{11})', movie.trailer)[0]
+            except Exception:
+                r = movie.trailer
 
-            album.movie_logo = request.FILES['movie_logo']
-            file_type = album.movie_logo.url.split('.')[-1]
+            movie.trailer = r
+
+            movie.movie_logo = request.FILES['movie_logo']
+            file_type = movie.movie_logo.url.split('.')[-1]
             file_type = file_type.lower()
             if file_type not in IMAGE_FILE_TYPES:
                 context = {
-                    'movie': album,
+                    'movie': movie,
                     'form': form,
                     'error_message': 'Image file must be PNG, JPG, or JPEG',
                 }
                 return render(request, 'music/create_movie.html', context)
-            album.save()
-            return render(request, 'music/detail.html', {'movie': album})
+            movie.save()
+            return render(request, 'music/detail.html', {'movie': movie})
         context = {
             "form": form,
         }
@@ -106,6 +109,15 @@ def delete_session(request, movie_id, session_id):
 def detail(request, movie_id):
     user = request.user
     movie = get_object_or_404(Movie, pk=movie_id)
+
+    try:
+        r = re.findall('([\w]{11})', movie.trailer)[0]
+    except Exception:
+        r = movie.trailer
+
+    movie.trailer = r
+    movie.save()
+
     return render(request, 'music/detail.html', {'movie': movie, 'user': user})
 
 
