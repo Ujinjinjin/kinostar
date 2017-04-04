@@ -61,15 +61,19 @@
         {% if movies %}
             {% for movie in movies %}
                 <div class="col-sm-4 col-lg-3">
+                    {% if movie.is_announcement %}
+                    <div class="thumbnail" style="min-height: 775px">
+                    {% else %}
                     <div class="thumbnail" style="min-height: 710px">
+                    {% endif %}
                         <a href="{% url 'music:detail' movie.id %}">
                             <img src="{{ movie.movie_logo.url }}" class="img-responsive" style="max-height: 400px">
                         </a>
                         <div class="caption">
-                            <h2 align="center">{{ movie.movie_title }}</h2>
                             {% if movie.is_announcement %}
                                 <h3 align="center"><span class="label label-info">{{ movie.premier_date }}</span></h3>
                             {% endif %}
+                            <h3 align="center">{{ movie.movie_title }}</h3>
                             <h4 align="center">{{ movie.genre }}</h4>
                             <div style="height: 14ex; overflow: hidden; text-overflow: ellipsis">
                                 <p align="center">{{ movie.about }}</p>
